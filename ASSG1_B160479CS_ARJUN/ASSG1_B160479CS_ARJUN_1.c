@@ -6,13 +6,13 @@ int main()
         //created variables
         //printf("\n1.Encryption\n2.Decryption\n\n\tEnter your choice : ");
         scanf("%d",&choice);
-        //printf("\nEnter string1 Length : ");
+        //printf("\nEnter string11 Length : ");
         scanf("%d",&N);
-        char string1[N];
-        //printf("\nEnter string1 : ");
+        char string11[N];
+        //printf("\nEnter string11 : ");
         getchar();
-       // scanf("%s",string1);
-        gets(string1);
+       // scanf("%s",string11);
+        gets(string11);
         //printf("\nEnter Key : ");
         scanf("%d",&K);
         switch(choice)
@@ -20,34 +20,34 @@ int main()
           case 1:
                 for(i=0;i<N;i++)
                 {
-                        if((string1[i]>64) && (string1[i]<91))
+                        if((string11[i]>64) && (string11[i]<91))
                         {
-                                string1[i]+=K;
-                                if(string1[i]>90)
-                                        string1[i]=64+(string1[i]-90);
+                                string11[i]+=K;
+                                if(string11[i]>90)
+                                        string11[i]=64+(string11[i]-90);
                         }
-                        else if((string1[i]>96) && (string1[i]<123))
+                        else if((string11[i]>96) && (string11[i]<123))
                         {
-                                string1[i]+=K;
-                                if(string1[i]>122)
-                                        string1[i]=96+(string1[i]-122);
+                                string11[i]+=K;
+                                if(string11[i]>122)
+                                        string11[i]=96+(string11[i]-122);
                         }
                 }
                 break;
           case 2:
                 for(i=0;i<N;i++)
                 {
-                        if((string1[i]>64) && (string1[i]<91))
+                        if((string11[i]>64) && (string11[i]<91))
                         {
-                                string1[i]-=K;
-                                if(string1[i]<65)
-                                        string1[i]=91-(65-string1[i]);
+                                string11[i]-=K;
+                                if(string11[i]<65)
+                                        string11[i]=91-(65-string11[i]);
                         }
-                        else if((string1[i]>96) && (string1[i]<123))
+                        else if((string11[i]>96) && (string11[i]<123))
                         {
-                                string1[i]-=K;
-                                if(string1[i]<97)
-                                        string1[i]=123-(97-string1[i]);
+                                string11[i]-=K;
+                                if(string11[i]<97)
+                                        string11[i]=123-(97-string11[i]);
                         }
                 }
                 break;
@@ -55,7 +55,7 @@ int main()
                 printf("\nERROR!!NO SUCH CHOICE!!EXITING!!");
         }
         for(i=0;i<N;i++)
-                printf("%c",string1[i]);
+                printf("%c",string11[i]);
         printf("\n");
         return 0;
 }
