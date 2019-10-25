@@ -5,15 +5,15 @@ void reverse(char string[],int len,int i);
 
 int main()
 {
-  char *string = (char*) malloc(1000*sizeof(char));
+  char *string1 = (char*) malloc(1000*sizeof(char));
   int i,len=0;
   //printf("Enter the string:");
-  gets(string);
-  for(i=0;string[i]!='\0';i++)
+  gets(string1);
+  for(i=0;string1[i]!='\0';i++)
     len++;
-  reverse(string,len-1+(len%2),0);
+  reverse(string1,len-1+(len%2),0);
   for(i=1;i<=len;i++)
-    printf("%c",string[i]);
+    printf("%c",string1[i]);
   printf("\n");
   return 0;
 }
